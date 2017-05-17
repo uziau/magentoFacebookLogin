@@ -1,15 +1,19 @@
+<script src="https://use.fontawesome.com/fd8c3f0fbe.js"></script>
+
 <?php Mage::getSingleton('core/session')->setFbCurrentpage(Mage::helper('core/url')->getCurrentUrl());?>
 <?php $isLogin = $this->helper('customer')->isLoggedIn()?>
 <?php if(!$isLogin){?>
     <?php $user = $this->helper('fblogin')->getFbUser()?>
     <div id="bt-loginfb">
          <?php if(!$user || !$user['email']){?>
-            <a class="fb_button fb_button_medium" onclick="login();return false;" href="#">
-                <span class="fb_button_text"><?php echo $this->__('Login') ?></span>
+            <a class="fb_button_custom" onclick="login();return false;" href="#">
+				<i class="fa fa-facebook fa-inverse fa-lg" aria-hidden="true"></i>
+                <span><?php echo $this->__('Login with Facebook') ?></span>
             </a>
         <?php }else{?>
-            <a class="fb_button fb_button_medium" onclick="window.location.href = '<?php echo $this->getFbloginUrl() ?>';">
-                <span class="fb_button_text"><?php echo $this->__('Login') ?></span>
+            <a class="fb_button_custom" onclick="window.location.href = '<?php echo $this->getFbloginUrl() ?>';">
+				<i class="fa fa-facebook fa-inverse fa-lg" aria-hidden="true"></i>
+                <span><?php echo $this->__('Login with Facebook') ?></span>
             </a>
         <?php }?>
     </div>
