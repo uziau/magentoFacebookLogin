@@ -1,38 +1,183 @@
 .account-login .fb-login h2 {
-	background-image:url("../../images/magestore/fblogin/fb.png");
-	background-repeat: no-repeat;
-	/* padding-left: 40px; */
-	padding-bottom: 5px
+    background-image: url("../../images/magestore/fblogin/fb.png");
+    background-repeat: no-repeat;
+    /* padding-left: 40px; */
+    padding-bottom: 5px
 }
+
 button.fb_button.fb_button_medium span {
     min-width: 140px;
 }
+
 span.fb_button_text {
-	display: block;      
-	height: 35px;      
-	text-align: center;      
-	padding-left: 40px;      
-	padding-right: 10px;      
-	line-height: 33px;      
-	color: white;
-	background: url("fblogin/fb.png") no-repeat;
-	min-width:140px;
-	}
+    display: block;
+    height: 35px;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 10px;
+    line-height: 33px;
+    color: white;
+    background: url("fblogin/fb.png") no-repeat;
+    min-width: 140px;
+}
+
 .col-1.new-users li.button {
-	min-width: 80px;
-	background: none;
-	display: block;
-	text-align: left;
-}	
-.fb-seprate{
-	margin-top:30px;
+    min-width: 80px;
+    background: none;
+    display: block;
+    text-align: left;
 }
 
-#connected{
-	text-align:center; 
-	margin-top:60px;
+.fb-seprate {
+    margin-top: 30px;
 }
 
-#connected #image{
-	margin-bottom:10px;
+#connected {
+    text-align: center;
+    margin-top: 60px;
+}
+
+#connected #image {
+    margin-bottom: 10px;
+}
+
+
+/* Custom CSS */
+
+.header-container .dropdown.custom-login .register a.register-link {
+    color: #ee5480;
+    text-decoration: underline;
+}
+
+.separator-small {
+    border-bottom: 1px solid #000;
+    margin: 0 auto;
+    width: 17%;
+}
+
+.custom-login .forgot-password h4 {
+    padding: 10px 0 5px 0;
+}
+
+.custom-login .separator-small {
+    padding-top: 20px;
+}
+
+.custom-login .register {
+    padding-top: 15px;
+}
+
+.short-line {
+    width: 30%;
+    text-align: center;
+}
+
+.terms-policy {
+    font-size: 11px;
+    /*border-bottom: 1px solid #838383;*/
+}
+
+#header-account .dropdown.custom-login .dropdown-content {
+    width: 300px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.custom-login h4,
+.header-container .dropdown .dropdown-content a.forgot-password-text,
+.forgot-password,
+.terms-policy,
+.register {
+    text-align: center;
+    color: #838383;
+}
+
+.custom-login input {
+    font-family: 'Arial', sans-serif;
+}
+
+.custom-login input,
+.custom-login .button,
+.custom-login .register {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
+    font-size: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.custom-login .button {
+    background-color: #ee5480;
+    color: #fff;
+}
+
+.custom-login input::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #a8a8a8;
+}
+
+.custom-login input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #a8a8a8;
+}
+
+.custom-login input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #a8a8a8;
+}
+
+.custom-login input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #a8a8a8;
+}
+
+.custom-login input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #a8a8a8;
+}
+
+.fb_button_custom {
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #3B5998;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 300;
+}
+
+.fb_button_custom span {
+    color: #fff;
+    padding-left: 10px;
+}
+.montserrat-regular {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+#user-menu .dropdown.open > .dropdown-heading.cover {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.dropdown.open > .dropdown-heading.cover > span,
+.dropdown.open > .dropdown-heading.cover > div {
+	background-color:#fff;
+	z-index: -1;
+	position: relative;
+    border-bottom: 3px solid #ee5480;
+}
+#user-menu #header-account .dropdown .dropdown-content, #user-menu .dropdown .dropdown-content {
+    top: 107%;
 }
