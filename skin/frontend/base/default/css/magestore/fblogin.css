@@ -181,3 +181,29 @@ span.fb_button_text {
 #user-menu #header-account .dropdown .dropdown-content, #user-menu .dropdown .dropdown-content {
     top: 107%;
 }
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+.custom-links li:hover {
+    border-bottom: 3px solid #ee5480;
+    color: #333;
+}
+.custom-links {
+    height: 40px;
+}
+.custom-links li {
+    padding-right: 10px;
+    line-height: 36px;
+}
+#header-account .dropdown-heading.cover, .custom-links li {
+    background-image: url(/skin/frontend/ultimo/default/images/img/link-separator.png);
+    background-position: right center;
+    background-position-x: right;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+}
+div#header-search {
+    margin-top: 8px;
+}
