@@ -194,6 +194,11 @@ input:-webkit-autofill {
 .custom-links li {
     padding-right: 10px;
     line-height: 36px;
+    display: inline-block;
+}
+.custom-links li a {
+    height: 40px;
+    display: block;
 }
 #header-account .dropdown-heading.cover, .custom-links li {
     background-image: url(/skin/frontend/ultimo/default/images/img/link-separator.png);
@@ -206,4 +211,7 @@ input:-webkit-autofill {
 }
 div#header-search {
     margin-top: 8px;
+}
+.container .dropdown.custom-login.open > .dropdown-heading.cover > *, .dropdown.custom-login.open > .dropdown-heading.cover > span, .dropdown.custom-login.open > .dropdown-heading.cover > span {
+    background: transparent;
 }
