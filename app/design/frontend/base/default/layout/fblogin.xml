@@ -6,11 +6,11 @@
 			<action method="addItem"><type>external_js</type><name>https://use.fontawesome.com/fd8c3f0fbe.js</name><params/></action>
 		</reference>
     </default>
-	<customer_account_login translate="label">
+	<!--<customer_account_login translate="label">
         <reference name="content">
             <block type="fblogin/fblogin" name="fblogin" template="fblogin/fblogin.phtml" />
         </reference>
-    </customer_account_login>
+    </customer_account_login>-->
 	
 	<fblogin_index_index>
 		<reference name="content">
@@ -62,4 +62,11 @@
 			<action method="removeLinkByUrl"><url helper="customer/getLoginUrl"/></action>
 		</reference>
 	</customer_logged_out>
+	<customer_account_login>
+    	<reference name="customer_form_login">
+      		<action method="setTemplate">
+        		<template>fblogin/custom_login_page.phtml</template>
+      		</action>
+    	</reference>
+  	</customer_account_login>
 </layout>

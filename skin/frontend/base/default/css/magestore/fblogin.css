@@ -44,7 +44,7 @@ span.fb_button_text {
 
 /* Custom CSS */
 
-.header-container .dropdown.custom-login .register a.register-link {
+.header-container .dropdown.custom-login .register a.register-link, .custom-login .register a.register-link {
     color: #ee5480;
     text-decoration: underline;
 }
@@ -83,13 +83,26 @@ span.fb_button_text {
     padding-right: 25px;
 }
 
+.login-page {
+    margin: 0 auto 50px auto;
+    border: 1px solid #333;
+    padding: 35px 30px;
+    width: 380px;
+}
+
 .custom-login h4,
 .header-container .dropdown .dropdown-content a.forgot-password-text,
+a.forgot-password-text,
 .forgot-password,
 .terms-policy,
 .register {
     text-align: center;
     color: #838383;
+}
+
+.custom-login .terms-policy {
+    width: 80%;
+    margin: 0 auto;
 }
 
 .custom-login input {

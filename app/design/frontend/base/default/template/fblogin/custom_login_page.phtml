@@ -1,0 +1,30 @@
+<div class="custom-login login-page">
+    <div class="dropdown-content left-hand">    
+        <form action="<?php echo Mage::helper('customer')->getLoginPostUrl() ?>" method="post" id="login-form">
+            <h4 class="montserrat-regular">LOGIN TO YOUR ACCOUNT</h4>
+            <?php echo $this->getBlockHtml('formkey'); ?>
+            <div>
+                <input class="input-text" type="text" name="login[username]" placeholder="Email Address" value="<?php echo $this->escapeHtml($this->getUsername()) ?>" id="email" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Email Address')) ?>" />
+                <input class="input-text" type="password" name="login[password]" placeholder="Password" id="pass" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Password')) ?>" />
+            </div>
+            <?php echo $this->getChildHtml('form.additional.info'); ?>
+            <?php echo $this->getChildHtml('persistent.remember.me'); ?>
+
+            <?php echo $this->getChildHtml('persistent.remember.me.tooltip'); ?>
+            <div>
+                <button type="submit" class="button montserrat-regular" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Login')) ?>" name="send" id="send2"><?php echo $this->__('LOGIN') ?></button>
+            </div>
+            <div class="forgot-password">
+                <a class="forgot-password-text" href="<?php echo $this->getForgotPasswordUrl() ?>"><?php echo $this->__('Forgot your password?') ?></a>
+                <h4 class="montserrat-regular">OR</h4>
+            </div>
+            
+        </form>
+        <?php echo $this->getLayout()->createBlock("fblogin/fblogin")->setTemplate("fblogin/bt_fblogin.phtml")->toHtml(); ?>
+        <p class="terms-policy">
+            Creating an account means you’re okay with Tinkerlust’s Terms of Service & Privacy Policy.
+        </p>
+        <div class="separator-small"></div>
+        <div class="register">Don’t have an account? <a class="register-link" href="<?php echo Mage::helper('customer')->getRegisterUrl() ?>">Register</a></div>
+    </div>
+</div>
