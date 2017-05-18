@@ -1,8 +1,8 @@
-<ul class="dropdown custom-login">
-    <a class="dropdown-heading cover" href="#">
+<ul class="awsm-dropdown custom-login">
+    <a class="awsm-dropdown-heading cover" href="#">
         <span>Login</span>
     </a>
-    <div class="dropdown-content left-hand">    
+    <div class="awsm-dropdown-content left-hand">    
         <form action="<?php echo Mage::helper('customer')->getLoginPostUrl() ?>" method="post" id="login-form">
             <h4 class="montserrat-regular">LOGIN TO YOUR ACCOUNT</h4>
             <?php echo $this->getBlockHtml('formkey'); ?>
@@ -31,3 +31,29 @@
         <div class="register">Don’t have an account? <a class="register-link" href="<?php echo Mage::helper('customer')->getRegisterUrl() ?>">Register</a></div>
     </div>
 </ul>
+
+<script>
+j = jQuery.noConflict();
+j(document).ready(function() {
+    j( ".awsm-dropdown-heading" ).click(function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        j(".awsm-dropdown-content").toggle();
+        j(".custom-login").toggleClass("custom-login-click");
+    });
+    j(".awsm-dropdown-content").click(function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    });
+    j(".ic-cart").hover(function() {
+        j(".awsm-dropdown-content").hide();
+        j(".custom-login").removeClass("custom-login-click");
+    });
+});
+
+j(document).click(function() {
+    j(".awsm-dropdown-content").hide();
+    j(".custom-login").removeClass("custom-login-click");
+});
+
+</script>

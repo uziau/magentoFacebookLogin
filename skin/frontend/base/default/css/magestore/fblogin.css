@@ -74,7 +74,6 @@ span.fb_button_text {
 
 .terms-policy {
     font-size: 11px;
-    /*border-bottom: 1px solid #838383;*/
 }
 
 #header-account .dropdown.custom-login .dropdown-content {
@@ -197,8 +196,7 @@ a.forgot-password-text,
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px white inset;
 }
-.custom-links li:hover {
-    border-bottom: 3px solid #ee5480;
+.custom-links li:hover > a, .awsm-dropdown-heading.cover span {
     color: #333;
 }
 .custom-links {
@@ -213,7 +211,7 @@ input:-webkit-autofill {
     height: 40px;
     display: block;
 }
-#header-account .dropdown-heading.cover, .custom-links li {
+#header-account .dropdown-heading.cover, .custom-links li, .awsm-dropdown {
     background-image: url(/skin/frontend/ultimo/default/images/img/link-separator.png);
     background-position: right center;
     background-position-x: right;
@@ -227,4 +225,28 @@ div#header-search {
 }
 .container .dropdown.custom-login.open > .dropdown-heading.cover > *, .dropdown.custom-login.open > .dropdown-heading.cover > span, .dropdown.custom-login.open > .dropdown-heading.cover > span {
     background: transparent;
+}
+.awsm-dropdown {
+    position: relative;
+    height: 37px;
+}
+.awsm-dropdown-heading {
+    padding: 0 10px;
+    line-height: 36px;
+}
+.custom-login-click {
+    border-bottom: 3px solid #ee5480;
+}
+.awsm-dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 4000;
+    width: 300px;
+    background: #fff;
+    padding: 25px;
+    top: 114%;
+    right: -20%;
+    box-shadow: -5px -5px 11px -5px rgba(0,0,0,0.05);
+    -webkit-box-shadow: -5px -5px 11px -5px rgba(0,0,0,0.05);
+    -moz-box-shadow: -5px -5px 11px -5px rgba(0,0,0,0.05);
 }
