@@ -88,6 +88,16 @@ span.fb_button_text {
     padding: 35px 30px;
     width: 380px;
 }
+@media (max-width: 414px) {
+    .login-page {
+        border: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 35px 30px;
+        width: 100%;
+    }
+}
 
 .custom-login h4,
 .header-container .dropdown .dropdown-content a.forgot-password-text,
@@ -244,8 +254,8 @@ div#header-search {
     width: 300px;
     background: #fff;
     padding: 25px;
-    top: 114%;
-    right: -20%;
+    top: 111%;
+    right: -2%;
     box-shadow: -5px -5px 11px -5px rgba(0,0,0,0.05);
     -webkit-box-shadow: -5px -5px 11px -5px rgba(0,0,0,0.05);
     -moz-box-shadow: -5px -5px 11px -5px rgba(0,0,0,0.05);

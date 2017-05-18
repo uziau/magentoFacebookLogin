@@ -1,5 +1,5 @@
 <ul class="awsm-dropdown custom-login">
-    <a class="awsm-dropdown-heading cover" href="#">
+    <a class="awsm-dropdown-heading cover" href="<?php echo Mage::getUrl('customer/account/login'); ?>">
         <span>Login</span>
     </a>
     <div class="awsm-dropdown-content left-hand">    
@@ -35,12 +35,14 @@
 <script>
 j = jQuery.noConflict();
 j(document).ready(function() {
-    j( ".awsm-dropdown-heading" ).click(function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        j(".awsm-dropdown-content").toggle();
-        j(".custom-login").toggleClass("custom-login-click");
-    });
+    if(j(window).width() > 768) {
+        j( ".awsm-dropdown-heading" ).click(function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            j(".awsm-dropdown-content").toggle();
+            j(".custom-login").toggleClass("custom-login-click");
+        });
+    }
     j(".awsm-dropdown-content").click(function(e) {
         e.preventDefault();
         e.stopPropagation();
