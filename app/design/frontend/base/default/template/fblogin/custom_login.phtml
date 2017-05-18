@@ -42,6 +42,8 @@ j(document).ready(function() {
             j(".awsm-dropdown-content").toggle();
             j(".custom-login").toggleClass("custom-login-click");
         });
+    } else {
+        j(".custom-links").addClass("links").removeClass("custom-links");
     }
     j(".awsm-dropdown-content").click(function(e) {
         e.preventDefault();
