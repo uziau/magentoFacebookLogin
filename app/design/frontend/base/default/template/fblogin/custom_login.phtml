@@ -18,7 +18,7 @@
                 <button type="submit" class="button montserrat-regular" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Login')) ?>" name="send" id="send2"><?php echo $this->__('LOGIN') ?></button>
             </div>
             <div class="forgot-password">
-                <a class="forgot-password-text" href="<?php echo $this->getForgotPasswordUrl() ?>"><?php echo $this->__('Forgot your password?') ?></a>
+                <a class="forgot-password-text" href="<?php echo Mage::getUrl('customer/account/forgotpassword') ?>"><?php echo $this->__('Forgot your password?') ?></a>
                 <h4 class="montserrat-regular">OR</h4>
             </div>
             
