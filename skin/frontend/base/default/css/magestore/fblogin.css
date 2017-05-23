@@ -301,10 +301,10 @@ div#header-search {
 }
 @media (max-width: 414px) {
     #checkoutSteps .custom-button-set .button {
-        margin-right: 8.55%;
+        width: 45%;
     }
     #checkoutSteps .custom-button-set button:first-child {
-        width: 45%;
+        margin-right: 8.55%;
     }
     #checkoutSteps .custom-button-set button:nth-child(2) {
         margin-right: 0;
