@@ -299,3 +299,19 @@ div#header-search {
         padding-bottom: 46px;
     }
 }
+@media (max-width: 414px) {
+    #checkoutSteps .custom-button-set .button {
+        width: 150.5px;
+    }
+    #checkoutSteps .custom-button-set button:first-child {
+        margin-right: 40px
+    }
+    #checkoutSteps .custom-button-set button:nth-child(2) {
+        margin-right: 0;
+    }
+}
+@media (min-width: 1024px) {
+    .guest-checkout {
+        padding-bottom: 15px;
+    }
+}
