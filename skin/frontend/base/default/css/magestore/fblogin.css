@@ -301,13 +301,16 @@ div#header-search {
 }
 @media (max-width: 414px) {
     #checkoutSteps .custom-button-set .button {
-        width: 150.5px;
+        margin-right: 8.55%;
     }
     #checkoutSteps .custom-button-set button:first-child {
-        margin-right: 40px
+        width: 45%;
     }
     #checkoutSteps .custom-button-set button:nth-child(2) {
         margin-right: 0;
+    }
+    #checkout-step-login .fb_button_custom {
+        width: 100%;
     }
 }
 @media (min-width: 1024px) {
