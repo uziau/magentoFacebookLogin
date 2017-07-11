@@ -3,7 +3,6 @@
 	<default>
 		<reference name="head">
 			<action method="addCss"><stylesheet>css/magestore/fblogin.css</stylesheet></action>
-			<action method="addItem"><type>external_js</type><name>https://use.fontawesome.com/fd8c3f0fbe.js</name><params/></action>
 		</reference>
     </default>
 	<!--<customer_account_login translate="label">
