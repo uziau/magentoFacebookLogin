@@ -87,6 +87,28 @@ class Magestore_Fblogin_IndexController extends Mage_Core_Controller_Front_Actio
 		
 		if($isSendPassToCustomer)
 			$customer->sendPasswordReminderEmail();
+
+		// set up subscriber newsletter
+		if ($customer->getId()){
+			$subscriber = Mage::getModel('newsletter/subscriber')->loadByEmail($data['email']);
+			if (!$subscriber->getId() || $subscriber->getStatus() == Mage_Newsletter_Model_Subscriber::STATUS_UNSUBSCRIBED || $subscriber->getStatus() == Mage_Newsletter_Model_Subscriber::STATUS_NOT_ACTIVE) {
+				$subscriber->setStatus(Mage_Newsletter_Model_Subscriber::STATUS_SUBSCRIBED);
+				$subscriber->setSubscriberEmail($data['email']);
+				$subscriber->setSubscriberConfirmCode($subscriber->RandomSequence());
+			}
+
+			$subscriber->setStoreId(Mage::app()->getStore()->getId());
+			$subscriber->setCustomerId($customer->getId());
+			$subscriber->sendConfirmationSuccessEmail();
+
+			try {
+				$subscriber->save();
+			}
+			catch (Exception $e) {
+				throw new Exception($e->getMessage());
+			}
+		}
+
 		return $customer;
 	}
 	//add old
