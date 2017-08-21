@@ -261,10 +261,13 @@ div#header-search {
         width: 100%;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .awsm-dropdown-heading {
         line-height: 44px;
-        font-size: 16px;
+        font-size: 14px;
+    }
+    .awsm-dropdown-heading.cover span{
+        text-transform: uppercase;
     }
     .awsm-dropdown {
         height: 44px;

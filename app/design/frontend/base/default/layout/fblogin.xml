@@ -18,42 +18,11 @@
 	</fblogin_index_index>
 
 	<customer_logged_out>
-		<reference name="header">
+		<reference name="account_links">
+			<action method="setTemplate">
+				<template>fblogin/account_links.phtml</template>
+			</action>
 			<block type="page/html" name="custom_login" as="customLogin" template="fblogin/custom_login.phtml"/>
-			<block type="page/html_header" name="user_menu" template="fblogin/user_menu.phtml">
-				<action method="insert">
-					<block>search_wrapper</block>
-				</action>
-				<action method="insert">
-					<block>custom_login</block>
-					<siblingName></siblingName>
-					<after>0</after>
-					<alias>customLogin</alias>
-				</action>
-				<action method="insert">
-					<block>top.links</block>
-					<siblingName></siblingName>
-					<after>0</after>
-					<alias>topLinks</alias>
-				</action>
-				<action method="insert">
-					<block>cart_sidebar</block>
-				</action>
-				<action method="insert">
-					<block>compare.mini</block>
-					<siblingName></siblingName>
-					<after>0</after>
-					<alias>compareMini</alias>
-				</action>
-
-				<!-- Custom static blocks which can extend (or even replace) Magento's Top Links -->
-				<block type="cms/block" name="block_header_top_links">
-					<action method="setBlockId"><block_id>block_header_top_links</block_id></action>
-				</block>
-				<block type="cms/block" name="block_header_top_links2">
-					<action method="setBlockId"><block_id>block_header_top_links2</block_id></action>
-				</block>
-			</block>
 		</reference>
 		<reference name="top.links">
 			<!-- Remove checkout links -->
